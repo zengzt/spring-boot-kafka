@@ -1,0 +1,14 @@
+server:
+  port: 2345
+spring:
+  kafka:
+    bootstrap-servers: 172.31.100.105:9092,172.31.100.106:9092,172.31.100.107:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: test
+      enable-auto-commit: true
+      auto-commit-interval: 1000
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
